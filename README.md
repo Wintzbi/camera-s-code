@@ -28,6 +28,28 @@ This Python script captures real-time video from a webcam using OpenCV and allow
 
 4. Press 'q' to exit the video capture.
 
+**Real-Time Video Capture with Raspberry Pi Camera**
+
+This Python script, named `Camera_code_pi.py`, captures real-time video from a Raspberry Pi camera using the picamera module and OpenCV. It displays the video feed in a window and saves it as an AVI file.
+
+**Requirements**
+- Python 3.x
+- picamera
+- OpenCV (`cv2`)
+
+**Usage**
+1. Make sure all the required libraries are installed. You can install them via pip:
+   ```bash
+   pip install opencv-python pyautogui pygetwindow Pillow
+   ```
+
+2. Rune the script:
+   ```bash
+   python Camera_code_pi.py
+   ```
+
+3. While the script is running, you can press 'q' to exit the video capture.
+
 ---
 
 ### README (Français)
@@ -59,3 +81,27 @@ Ce script Python capture la vidéo en temps réel à partir d'une webcam à l'ai
 3. Pendant l'exécution du script, vous pouvez appuyer sur 'm' pour capturer une capture d'écran de la fenêtre nommée 'frame' à tout moment.
 
 4. Appuyez sur 'q' pour quitter la capture vidéo.
+
+### Capture vidéo en temps réel avec la caméra Raspberry Pi
+
+Ce script Python, nommé `Camera_code_pi.py`, capture la vidéo en temps réel à partir d'une caméra Raspberry Pi en utilisant le module picamera et OpenCV. Il affiche le flux vidéo dans une fenêtre et le sauvegarde sous forme de fichier AVI.
+
+**Prérequis**
+- Python 3.x
+- picamera
+- OpenCV (`cv2`)
+
+**Utilisation**
+1. Assurez-vous que toutes les bibliothèques requises sont installées. Vous pouvez les installer via pip :
+   ```bash
+   pip install picamera opencv-python
+   ```
+
+2. Exécutez le sprint:
+   ```bash
+   python Camera_code_pi.py
+   ```
+
+3. Pendant l'exécution du script, vous pouvez appuyer sur 'q' pour quitter la capture vidéo.
+
+---
