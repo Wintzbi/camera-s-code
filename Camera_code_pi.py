@@ -1,9 +1,17 @@
 import picamera2
 import cv2
 import time
+import subprocess
 from datetime import datetime
 
 # Function to capture a screenshot of a specific window and save it
+def display_screenshot(image_path):
+    try:
+        # Utilisez subprocess pour appeler le visualiseur d'image
+        subprocess.run(["feh", "--fullscreen", image_path])
+    except Exception as e:
+        print("An error occurred while displaying the screenshot:", e)
+
 def capture_screen(time): 
     try:
         # Capture the screen using PiCamera
@@ -30,7 +38,8 @@ def capture_screen(time):
         
         # Save the frame as a screenshot
         cv2.imwrite(screenshot_path, frame)
-        
+
+        display_screenshot(screenshot_path)
     except Exception as e:
         print("An error occurred:", e)
 
