@@ -1,9 +1,8 @@
 import time
-import cv2
-from picamera2 import PiCamera2, Preview
+from picamera2 import Picamera2, Preview
 
 # Création de l'instance PiCamera2
-picam = PiCamera2()
+picam = Picamera2()
 types = True
 
 # Configuration de l'aperçu
@@ -14,10 +13,14 @@ picam.configure(config)
 picam.start_preview(Preview.QTGL)
 
 def take_screenshot():
-    # Capture d'une image
-    picam.start()
-    picam.capture_file("screenshot.jpg")
-    picam.stop()  # Arrêt de la capture
+    try:
+        # Capture d'une image
+        picam.start()
+        time.sleep(1)  # Attente pour stabiliser l'image
+        picam.capture_file("screenshot.jpg")
+    finally:
+        # Assurez-vous d'arrêter la capture même en cas d'erreur
+        picam.stop()  # Arrêt de la capture
 
 try:
     while types:
