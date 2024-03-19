@@ -15,7 +15,6 @@ picam.start_preview(Preview.QTGL)
 try:
     while types:
         picam.start()
-        time.sleep(5)
         # Détecter la pression de la touche "Q"
         if input("Appuyez sur 'Q' pour arrêter : ").lower() == 'q':
             types = False
