@@ -1,4 +1,4 @@
-import picamera
+import picamera2
 import cv2
 import time
 from datetime import datetime
@@ -7,7 +7,7 @@ from datetime import datetime
 def capture_screen(time): 
     try:
         # Capture the screen using PiCamera
-        with picamera.PiCamera() as camera:
+        with picamera2.PiCamera() as camera:
             camera.resolution = (640, 480)
             camera.capture('frame.jpg')
         
